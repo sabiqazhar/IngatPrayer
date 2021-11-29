@@ -1,5 +1,15 @@
+function prayerTimes(latitude, longitude){
+    fetch(`http://api.aladhan.com/v1/calendar?latitude=${latitude}&longitude=${longitude}&method=2`)
+    .then(respone => respone.json())
+    .then(respone => {
+        let date = new Date();
+        let today = date.getDate();
+        console.log(respone.data[today-1]);
+    })
+}
+
 function success(position){
-    console.log(position);
+    prayerTimes(position.coords.latitude, position.coords.longitude);
 }
 
 function error(){
