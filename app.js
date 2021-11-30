@@ -28,7 +28,8 @@ function success(position){
 }
 
 function error(){
-    alert('posisi tidak dapat diakses');
+    prayerTimes(' -6.200000', '106.816666')
+    alert('Posisi default yang digunakan adalah Jakarta');
 }
 
 function userLoct() {
@@ -43,7 +44,7 @@ function userLoct() {
 function index() {
     const app = document.getElementById('app');
     const h3 = document.createElement('h3');
-    h3.innerHTML = 'Prayer time';
+    h3.innerHTML = 'Ingat Prayer time';
     app.appendChild(h3);
 
     userLoct();
