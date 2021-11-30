@@ -4,7 +4,7 @@ function prayerTimes(latitude, longitude){
     .then(respone => {
         let date = new Date();
         let today = date.getDate() - 1;
-        let data = respone.data[0].timings;
+        let data = respone.data[today].timings;
 
         let app =  document.getElementById('app');
         let table = document.createElement('table');
